@@ -1,4 +1,5 @@
 package org.junit.tests.assertion;
+import java.util.Comparator;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -16,6 +17,8 @@ import static org.junit.Assert.fail;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.text.Collator;
+import java.util.Comparator;
 
 import org.junit.Assert;
 import org.junit.ComparisonFailure;
@@ -410,7 +413,13 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
-
+    
+    @Test
+    public void greaterThan() {
+//        Assert.assertGreaterThan("a", "b", Collator.getInstance());
+        Assert.assertGreaterThan("b", "a", Collator.getInstance()); 
+    }
+    
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);
