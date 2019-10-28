@@ -414,12 +414,24 @@ public class AssertionTest {
         assertEquals(1.0d, 1.0d, 0.0d);
     }
     
+<<<<<<< HEAD
     @Test
     public void greaterThan() {
 //        Assert.assertGreaterThan("a", "b", Collator.getInstance());
         Assert.assertGreaterThan("b", "a", Collator.getInstance()); 
     }
     
+=======
+    public void greaterThan() {
+        Assert.assertGreatherThan(4, 3);
+        Assert.assertGreatherThan('c', 'a');
+        Assert.assertGreatherThan(125.4f, 23.2f);
+        
+    }
+    
+    
+
+>>>>>>> refs/heads/greater-primitives
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);

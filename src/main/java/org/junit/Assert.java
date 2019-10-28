@@ -1032,7 +1032,35 @@ public class Assert {
         return message != null && message.length() != 0 ? message + ": " : "";
     }
     
+<<<<<<< HEAD
     public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
         assertTrue(comparator.compare(o1, o2)>0);  
     }
+=======
+    public static void assertGreatherThan(char c, char c1) {
+        assertTrue(c>c1);
+    }
+    public static void assertGreatherThan(float f, char f1) {
+        assertTrue(f>f1);
+    }
+    public static void assertGreatherThan(int i, int i1) {
+        assertTrue(i>i1);
+    }
+    public static void assertGreatherThan(long l, long l1) {
+        assertTrue(l>l1);
+    }
+    public static void assertGreatherThan(byte b, byte b1) {
+        assertTrue(b>b1);
+    }
+    public static void assertGreatherThan(short s, short s1) {
+        assertTrue(s>s1);
+    }
+    public static void assertGreatherThan(double d,double d1) {
+        assertTrue(d>d1);
+    }
+//    public static void assertGreatherThan(boolean b, boolean b1) {
+//        assertTrue(b>b1);
+//    }
+    
+>>>>>>> refs/heads/greater-primitives
 }
