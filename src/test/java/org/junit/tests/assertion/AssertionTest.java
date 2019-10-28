@@ -410,6 +410,15 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
+    
+    public void greaterThan() {
+        Assert.assertGreatherThan(4, 3);
+        Assert.assertGreatherThan('c', 'a');
+        Assert.assertGreatherThan(125.4f, 23.2f);
+        
+    }
+    
+    
 
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
